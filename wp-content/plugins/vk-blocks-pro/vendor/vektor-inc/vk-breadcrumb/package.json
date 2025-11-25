@@ -1,0 +1,5 @@
+{
+  "scripts": {
+	"phpunit": "composer install && npx wp-env run tests-cli --env-cwd='wp-content/plugins/vk-breadcrumb' vendor/bin/phpunit -c .phpunit.xml --verbose"
+  }
+}

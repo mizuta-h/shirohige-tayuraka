@@ -1,0 +1,87 @@
+# Translation of Plugins - Public Post Preview - Stable (latest release) in Japanese
+# This file is distributed under the same license as the Plugins - Public Post Preview - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2025-05-18 13:33:51+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/4.0.1\n"
+"Language: ja_JP\n"
+"Project-Id-Version: Plugins - Public Post Preview - Stable (latest release)\n"
+
+#. translators: %s: Post title
+#: public-post-preview.php:212
+msgid "Open public preview of &#8220;%s&#8221;"
+msgstr "&#8220;%s&#8221; の一般公開プレビュー"
+
+#: public-post-preview.php:120
+msgid "Default expiration time of a preview link in hours."
+msgstr "デフォルトの有効期限 (時間) 。"
+
+#: public-post-preview.php:119
+msgid "hours"
+msgstr "時間"
+
+#: public-post-preview.php:115
+msgid "Expiration Time"
+msgstr "有効期限"
+
+#: public-post-preview.php:90
+msgid "Default expiration time in seconds."
+msgstr "デフォルトの有効期限 (秒) 。"
+
+#. Plugin URI of the plugin
+#: public-post-preview.php
+msgid "https://github.com/ocean90/public-post-preview"
+msgstr "https://github.com/ocean90/public-post-preview"
+
+#: public-post-preview.php:676
+msgid "This link has expired!"
+msgstr "リンクの有効期限が切れています !"
+
+#. Author URI of the plugin
+#: public-post-preview.php
+msgid "https://dominikschilling.de/"
+msgstr "https://dominikschilling.de/"
+
+#. Description of the plugin
+#: public-post-preview.php
+msgid "Allow anonymous users to preview a post before it is published."
+msgstr "投稿の公開前に、誰でもプレビューを見られるようにします。"
+
+#: public-post-preview.php:404
+msgid "Copy and share this preview URL."
+msgstr "プレビュー URL をコピーし、シェアします。"
+
+#. Author of the plugin
+#: public-post-preview.php
+msgid "Dominik Schilling"
+msgstr "Dominik Schilling"
+
+#. Plugin Name of the plugin
+#: public-post-preview.php public-post-preview.php:108
+msgid "Public Post Preview"
+msgstr "Public Post Preview"
+
+#: public-post-preview.php:680
+msgid "No public preview available!"
+msgstr "外部確認は利用できません !"
+
+#: public-post-preview.php:399 js/dist/gutenberg-integration.js:2
+#: js/src/components/preview-toggle/index.js:197
+msgid "Enable public preview"
+msgstr "外部確認を許可する"
+
+#: public-post-preview.php:207 public-post-preview.php:258
+msgid "Public Preview"
+msgstr "外部確認"
+
+#: public-post-preview.php:188
+msgid "Disabled!"
+msgstr "無効化中"
+
+#: public-post-preview.php:187
+msgid "Enabled!"
+msgstr "有効化中"

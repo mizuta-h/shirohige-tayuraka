@@ -1,0 +1,109 @@
+{{device}}
+{{designType}}
+{{bfb_fontSize_pc}}
+{{bfb_fontSize_sp}}
+{{btnColor}}
+{{btnColorLighten}}
+{{btnColor2}}
+{{btnColorLighten2}}
+{{bfbBgColor}}
+{{bfbBtnPaddingTopBottom_pc}}
+{{bfbBtnPaddingTopBottom_sp}}
+{{btnTextColorPicker}}
+{{btnTextColorPicker2}}
+
+@mixin bfb_bgGrad_lighten($gradColStr: #e51c1c,$gradColEnd: #ee2525,$lighten: 0.1){
+
+	background: $gradColStr;
+	background: -moz-linear-gradient(top, $gradColStr 0%, lighten($gradColStr,$lighten) 100%);
+	background: -webkit-linear-gradient(top, $gradColStr 0%, lighten($gradColStr,$lighten) 100%);
+	background: linear-gradient(to bottom, $gradColStr 0%, lighten($gradColStr,$lighten) 100%);
+}
+@mixin bfb_bgGrad_darken($gradColStr: #e51c1c,$gradColEnd: #ee2525,$darken: 0.2){
+	background: $gradColStr;
+	background: -moz-linear-gradient(top, $gradColStr 0%, darken($gradColStr,$darken) 100%);
+	background: -webkit-linear-gradient(top, $gradColStr 0%, darken($gradColStr,$darken) 100%);
+	background: linear-gradient(to bottom, $gradColStr 0%, darken($gradColStr,$darken) 100%);
+}
+
+@mixin bg_rgba($hex: #000,$alpha){
+	background-color: rgba($hex,$alpha);
+	color: $hex;
+}
+
+@mixin bfb_button($startColor: #e51c1c,$endColor: #ee2525,$lighten: 0.1,$btnTextColor: #fff){
+	
+	@if $designType == 'textBtn' {
+		display: block;
+	} @else {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	@if $device == 'pc' {
+		padding: #{$bfbBtnPaddingTopBottom_pc}px 20px;
+	} @else {
+		padding: #{$bfbBtnPaddingTopBottom_sp}px 20px;
+	}
+
+	margin: 0 auto;
+	max-width: 300px;
+	box-sizing: border-box;
+	@include bfb_bgGrad_lighten($startColor,$startColor,$lighten);
+	border-bottom: solid 3px darken($startColor,10%);
+	line-height: 180%;
+	color: $btnTextColor;
+	text-shadow: 0 1px 0 darken($startColor,20%);
+	text-decoration: none;
+	text-align: center;
+	transition: .4s;
+	font-weight: bold;
+}
+
+[id^="bfb_content_"].bfb_view_#{$device}{
+
+    position: fixed;
+	transition: .3s;
+    z-index: 9999;
+	width: 100%;
+    bottom: 0;
+    @if $bfbBgColor == '' {
+		@include bg_rgba(#000,0.85);
+	} @else {
+		@include bg_rgba($bfbBgColor,0.85);
+	}
+	text-align: center;
+	font-family: "Montserrat","游ゴシック",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+
+	@if $device == 'pc' {
+		font-size: #{$bfb_fontSize_pc}px;
+	} @else {
+		font-size: #{$bfb_fontSize_sp}px;
+	}
+
+	a.bfb_btn{
+
+		@include bfb_button($btnColor,$btnColor,$btnColorLighten,$btnTextColorPicker);
+
+		&.bfb_textBtn { display: block; }
+		&:hover{ @include bfb_bgGrad_lighten(darken($btnColor,10%),$btnColor,20%) }
+
+		svg.bfb_icon{ display: inline-block; margin-top: -2px; margin-left: 4px; width: 1em; height: 1em; vertical-align: middle;  }
+
+	}
+
+	@if $btnColor2 != false {
+		a.bfb_btn2{
+
+			@include bfb_button($btnColor2,$btnColor2,$btnColorLighten2,$btnTextColorPicker2);
+
+			margin-left: 10px;
+
+			&.bfb_textBtn { display: block; }
+			&:hover{ @include bfb_bgGrad_lighten(darken($btnColor2,10%),$btnColor2,20%) }
+			
+			svg.bfb_icon{ display: inline-block; margin-top: -2px; margin-left: 4px; width: 1em; height: 1em; vertical-align: middle;  }
+		}
+	}
+
+}

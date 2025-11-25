@@ -1,0 +1,196 @@
+{{device}}
+{{designType}}
+{{bfb_fontSize_pc}}
+{{bfb_fontSize_sp}}
+{{btnColor}}
+{{btnColor2}}
+{{bfbBgColor}}
+{{innerBfb_PaddingTop_pc}}
+{{innerBfb_PaddingLeft_pc}}
+{{topText_bottom_pc}}
+{{innerBfb_PaddingTop_sp}}
+{{innerBfb_PaddingLeft_sp}}
+{{topText_bottom_sp}}
+{{topTextColorPicker}}
+{{discTextColorPicker}}
+{{optimize_preview}}
+
+@if $device == 'pc' or $optimize_preview == 'true' {
+
+	#bfb_content_pc{ display: block !important; }
+	#bfb_content_sp{ display: none !important; }
+	@media screen and (max-width: 480px) {
+		#bfb_content_pc{ display: none !important; }
+		#bfb_content_sp{ display: block !important; }
+	}
+
+	[id^="bfb_content_"]{
+		
+		.inner_bfb{
+			position: relative;
+			line-height: 160%;
+		}
+		//説明文+ボタン、ボタン+ボタン
+		& .bfb_parts_2 .bfb_discText{
+			width: calc( 50% - 10px );
+			max-width: calc( 50% - 10px );
+			overflow: hidden;
+		}
+		&.bfb_textTextBtn .bfb_parts_2 a,
+		&.bfb_textBtnTextBtn .bfb_parts_2 a{
+			width: calc( 50% - 10px );
+			max-width: calc( 50% - 10px );
+			overflow: hidden;
+		}
+		.bfb_parts_2{
+			margin: 0 auto;
+			max-width: 700px;
+			text-align: center;
+		}
+		.bfb_parts_2 .bfb_discText{
+			display: inline-block;
+			margin-right: 10px;
+			text-align: left;	
+			vertical-align: middle;
+		}
+		.bfb_parts_2 a + a{ margin-left: 15px; }
+
+
+		//閉じるボタン
+		.bfb_closed{
+			z-index: 99999;
+			position: absolute;
+			padding: 5px 10px;
+			top: -35px;
+			right: 10px;
+			cursor: pointer;
+		}
+		.bfb_closed img{
+			width: 20px;
+			height: 20px;
+		}
+		//自動非表示
+		&.bfb_hide.bfb_rb,
+		&.bfb_hide.bfb_lb,
+		&.bfb_hide{ transform: translateY(150%); }
+		&.bfb_hide.bfb_rt,
+		&.bfb_hide.bfb_lt{
+		    transform: translateY(-150%);
+		}
+		//ボタン形状
+		&.bfb_rounded_corners a{ border-radius: 40px; }
+		&.bfb_square a{ border-radius: 4px; }
+
+	}
+
+	[id^="bfb_content_"].bfb_view_pc{
+
+		.inner_bfb{
+			padding: #{$innerBfb_PaddingTop_pc}px 10px;
+		}
+		.bfb_topText{
+			margin-bottom: #{$topText_bottom_pc}px;
+			color: $topTextColorPicker;
+			font-size: 1em;
+		}
+		.bfb_parts_2 .bfb_discText{
+			color: $discTextColorPicker;
+		}
+
+		@if $designType == 'imgBanner' {
+
+			//バナー画像
+			&.bfb_imgBanner.bfb_view_pc{
+				width: auto !important;
+				background: transparent !important;
+			}
+			&.bfb_imgBanner.bfb_view_pc a{
+				display: block !important;
+			}
+			&.bfb_imgBanner.bfb_view_pc.bfb_rt{ right: 20px; top: 20px; }
+			&.bfb_imgBanner.bfb_view_pc.bfb_rb{ right: 20px; bottom: 20px; }
+			&.bfb_imgBanner.bfb_view_pc.bfb_lb{ left: 20px; bottom: 20px; }
+			&.bfb_imgBanner.bfb_view_pc.bfb_lt{ left: 20px; top: 20px; }
+			&.bfb_imgBanner.bfb_view_pc img{ max-width: 300px; max-height: 300px; }
+
+		}
+
+	}
+
+}
+
+@if $device == 'sp' or $optimize_preview == 'true' {
+
+	[id^="bfb_content_"].bfb_view_sp{
+
+		.inner_bfb{ padding: #{$innerBfb_PaddingTop_sp}px 5px; }
+		
+		&.bfb_imgBanner.bfb_rt{
+		    left: 0;
+		    right: auto;
+		    top: 0;
+		    bottom: auto;
+		}
+		&.bfb_imgBanner.bfb_rb{
+		    top: auto;
+		    left: 0;
+		    right: auto;
+		    bottom: 0;
+		}
+		& .bfb_closed{
+			top: -30px;
+			right: 5px;
+		}
+		& .bfb_closed img{
+			width: 20px !important;
+			height: 20px !important;
+		}
+		&.bfb_top{
+			right: 0;
+		    top: 0;
+		}
+		&.bfb_hide.bfb_top{
+			transform: translateY(-150%);
+		}
+		&.bfb_bottom{
+			right: 0;
+		    bottom: 0;
+		}
+		&.bfb_hide.bfb_bottom{
+			transform: translateY(150%);
+		}
+		.bfb_topText{
+			margin-bottom: #{$topText_bottom_sp}px;
+			color: $topTextColorPicker;
+			font-size: 1em;
+		}
+		a.bfb_btn,
+		a.bfb_btn2{
+		    padding: 8px 10px;
+		}
+
+		.bfb_parts_2 .bfb_discText{
+			margin-right: 10px;
+			color: $discTextColorPicker;
+			font-size: 1em;
+		}
+		.bfb_parts_2 a + a{ margin-left: 5px; }
+
+		&.bfb_textBtnTextBtn .bfb_parts_2 a + a{
+			margin-left: 10px;
+		}
+		&.bfb_imgBanner a{ display: block; line-height: 0; }
+		&.bfb_imgBanner a img {
+			max-width: none;
+		    max-height: none;
+		    width: 100%;
+			height: auto;
+		}
+		&.bfb_imgBanner.bfb_rt{ right: 0; top: 0; }
+		&.bfb_imgBanner.bfb_rb{ right: 0; bottom: 0; }
+		&.bfb_imgBanner.bfb_lb{ left: 0; bottom: 0; }
+		&.bfb_imgBanner.bfb_lt{ left: 0; top: 0; }
+
+	}
+
+}//@if $device == 'pc' {

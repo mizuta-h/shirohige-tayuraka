@@ -1,0 +1,29 @@
+{
+  "apiVersion": 3,
+  "name": "vk-blocks/timeline-item",
+  "title": "Timeline Item",
+  "category": "vk-blocks-cat",
+  "attributes": {
+    "label": {
+      "type": "string",
+      "default": "6:00AM"
+    },
+    "color": {
+      "type": "string"
+    },
+    "style": {
+      "type": "string",
+      "default": "outlined"
+    },
+    "styleLine": {
+      "type": "string",
+      "default": "default"
+    }
+  },
+  "description": "This element sets the label, color, and style of the timeline.",
+  "textdomain": "vk-blocks-pro",
+  "supports": {
+    "html": false,
+    "className": true
+  }
+}

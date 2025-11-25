@@ -1,0 +1,4 @@
+.git
+.wp-env.override.json
+vendor/
+.phpunit.result.cache

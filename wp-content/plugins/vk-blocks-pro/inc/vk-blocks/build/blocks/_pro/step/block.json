@@ -1,0 +1,18 @@
+{
+  "apiVersion": 3,
+  "name": "vk-blocks/step",
+  "title": "Step",
+  "category": "vk-blocks-cat",
+  "attributes": {
+    "firstDotNum": {
+      "type": "number",
+      "default": 1
+    }
+  },
+  "description": "Set and display step marks, which are useful when explaining the order.",
+  "textdomain": "vk-blocks-pro",
+  "supports": {
+    "html": false,
+    "className": true
+  }
+}

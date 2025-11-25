@@ -1,0 +1,1 @@
+document.defaultView.addEventListener("load",function(){var e=document.querySelectorAll(".vk_animation");if(e=Array.from(e))for(var i in e){let n=e[i];new IntersectionObserver(e=>{e[0].isIntersecting?n.classList.add("vk_animation-active"):n.classList.contains("vk_animation-once")||n.classList.remove("vk_animation-active")}).observe(n)}});

@@ -1,0 +1,42 @@
+.vk-campaign-text {
+	text-align: center;
+	font-size: 14px;
+	line-height: 1.6;
+	padding: 4px 5px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	// グローバルメニューのドロップダウンの上にならないように注意
+	// z-index: 100;
+	i {
+		margin-right: 0.5em;
+	}
+
+	&_btn {
+		font-size: 12px;
+		line-height: 1;
+		display: inline-block;
+		padding: 4px 1em;
+		border-radius: var(--vk-size-radius-sm);
+		margin: 0 1em;
+		border: 1px solid #fff;
+
+		&:hover {
+			text-decoration: none;
+			border: 1px solid #fff;
+		}
+	}
+	a.vk-campaign-text_btn {
+		text-decoration: none;
+	}
+
+	&_link {
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
