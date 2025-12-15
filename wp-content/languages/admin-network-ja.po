@@ -1,25 +1,83 @@
-# Translation of WordPress - 6.8.x - Development - Administration - Network Admin in Japanese
-# This file is distributed under the same license as the WordPress - 6.8.x - Development - Administration - Network Admin package.
+# Translation of WordPress - 6.9.x - Development - Administration - Network Admin in Japanese
+# This file is distributed under the same license as the WordPress - 6.9.x - Development - Administration - Network Admin package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2025-11-12 12:25:35+0000\n"
+"PO-Revision-Date: 2025-11-20 16:07:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/4.0.3\n"
 "Language: ja_JP\n"
-"Project-Id-Version: WordPress - 6.8.x - Development - Administration - Network Admin\n"
+"Project-Id-Version: WordPress - 6.9.x - Development - Administration - Network Admin\n"
 
-#: wp-admin/network/upgrade.php:32
+#: wp-admin/network/sites.php:361
+msgid "Site flagged for deletion."
+msgstr "サイトを削除予定としてマークしました。"
+
+#: wp-admin/network/sites.php:358
+msgid "Site deletion flag removed."
+msgstr "サイト削除予定マークを取り消しました。"
+
+#: wp-admin/network/sites.php:346
+msgid "Site permanently deleted."
+msgstr "サイトを完全に削除しました。"
+
+#: wp-admin/network/sites.php:343
+msgid "Sites permanently deleted."
+msgstr "サイトを完全に削除しました。"
+
+#: wp-admin/network/sites.php:237
+msgid "Delete these sites permanently"
+msgstr "これらのサイトを完全に削除"
+
+#: wp-admin/network/sites.php:137
+msgid "Flagging a site for deletion makes the site unavailable to its users and visitors. This is a reversible action. A super admin can permanently delete the site at a later date."
+msgstr "サイトを削除予定としてマークすると、サイトはユーザーや訪問者から利用できなくなります。この操作は元に戻すことができます。特権管理者は後で、サイトを完全に削除できます。"
+
+#: wp-admin/network/sites.php:131
+msgid "Archiving a site makes the site unavailable to its users and visitors. This is a reversible action."
+msgstr "サイトをアーカイブすると、サイトはユーザーや訪問者から利用できなくなります。この操作は元に戻すことができます。"
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:66
+msgid "You are about to flag the site %s for deletion."
+msgstr "サイト %s を削除予定としてマークしています。"
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:64
+msgid "You are about to remove the deletion flag from the site %s."
+msgstr "サイト %s から削除予定マークを取り消そうとしています。"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:772
+msgid "Flag for Deletion"
+msgstr "削除予定としてマーク"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:761
+msgctxt "site"
+msgid "Remove Deletion Flag"
+msgstr "削除予定マークを取り消し"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:258
+msgid "Flagged for Deletion <span class=\"count\">(%s)</span>"
+msgid_plural "Flagged for Deletion <span class=\"count\">(%s)</span>"
+msgstr[0] "削除予定としてマーク <span class=\"count\">(%s)</span>"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:40
+#: wp-admin/network/site-info.php:205
+msgid "Flagged for Deletion"
+msgstr "削除予定としてマーク済み"
+
+#: wp-admin/network/upgrade.php:37
 msgid "<a href=\"https://developer.wordpress.org/advanced-administration/multisite/admin/#network-admin-updates-screen\">Documentation on Upgrade Network</a>"
 msgstr "<a href=\"https://developer.wordpress.org/advanced-administration/multisite/admin/#network-admin-updates-screen\">ネットワークのアップグレードに関するドキュメント</a>"
 
-#: wp-admin/network/sites.php:124
+#: wp-admin/network/sites.php:125 wp-admin/network/sites.php:220
 msgid "Deleting a site is a permanent action that cannot be undone. This will delete the entire site and its uploads directory."
 msgstr "サイトの削除は元に戻すことのできない永続的な操作です。これにより、サイト全体とそのアップロードディレクトリが削除されます。"
 
-#: wp-admin/network/sites.php:121
+#: wp-admin/network/sites.php:122
 msgid "Delete this site permanently"
 msgstr "このサイトを完全に削除する"
 
@@ -42,11 +100,6 @@ msgstr "<a href=\"https://developer.wordpress.org/advanced-administration/multis
 #: wp-admin/includes/network.php:680
 msgid "https://developer.wordpress.org/advanced-administration/server/web-server/nginx/"
 msgstr "https://developer.wordpress.org/advanced-administration/server/web-server/nginx/"
-
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:761
-msgctxt "site"
-msgid "Activate"
-msgstr "有効化"
 
 #: wp-admin/network/site-new.php:87
 msgid "Missing site title."
@@ -86,7 +139,7 @@ msgstr "サイトネットワーク構成認証キー"
 msgid "Network configuration rules for %s"
 msgstr "%s のサイトネットワーク構成ルール"
 
-#: wp-admin/network/upgrade.php:141
+#: wp-admin/network/upgrade.php:142
 msgid "WordPress has been updated! Next and final step is to individually upgrade the sites in your network."
 msgstr "WordPress が更新されました。次に最後のステップとして、ネットワークの個々のサイトを更新する必要があります。"
 
@@ -115,7 +168,7 @@ msgstr "%s のテーマサイトへ移動"
 msgid "Child theme of %s"
 msgstr "%s の子テーマ"
 
-#: wp-admin/network/site-info.php:199
+#: wp-admin/network/site-info.php:201
 msgctxt "site"
 msgid "Public"
 msgstr "公開"
@@ -155,12 +208,6 @@ msgstr "Y年m月d日 a g:i:s"
 #: wp-admin/includes/network.php:679
 msgid "It seems your network is running with Nginx web server. <a href=\"%s\">Learn more about further configuration</a>."
 msgstr "サイトネットワークで Nginx Web サーバーを実行しているようです。<a href=\"%s\">詳細設定について詳しくご覧ください</a>。"
-
-#. translators: %s: Number of sites.
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:258
-msgid "Deleted <span class=\"count\">(%s)</span>"
-msgid_plural "Deleted <span class=\"count\">(%s)</span>"
-msgstr[0] "削除済み <span class=\"count\">(%s)</span>"
 
 #. translators: %s: Number of sites.
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:251
@@ -214,11 +261,11 @@ msgstr "<a href=\"https://ja.wordpress.org/support/article/tools-network-screen/
 msgid "The constant %s cannot be defined when creating a network."
 msgstr "サイトネットワークを作成する際に、%s 定数を定義することはできません。"
 
-#: wp-admin/network/sites.php:208
+#: wp-admin/network/sites.php:222
 msgid "You are about to delete the following sites:"
 msgstr "以下のサイトを削除しようとしています:"
 
-#: wp-admin/network/site-users.php:249
+#: wp-admin/network/site-users.php:269
 msgid "User could not be added to this site."
 msgstr "このサイトにユーザーを追加できません。"
 
@@ -244,7 +291,7 @@ msgid "Active Child Theme"
 msgstr "有効な子テーマ"
 
 #. translators: %s: File size in kilobytes.
-#: wp-admin/network/settings.php:442
+#: wp-admin/network/settings.php:438
 msgid "%s KB"
 msgstr "%s KB"
 
@@ -261,7 +308,7 @@ msgstr "このサイトのテーマを削除する権限がありません。"
 msgid "Sorry, you are not allowed to manage network themes."
 msgstr "サイトネットワークのテーマを管理する権限がありません。"
 
-#: wp-admin/network/sites.php:335
+#: wp-admin/network/sites.php:349
 msgid "Sorry, you are not allowed to delete that site."
 msgstr "そのサイトを削除する権限がありません。"
 
@@ -278,11 +325,11 @@ msgstr "このサイトネットワークにサイトを追加する権限があ
 msgid "Sorry, you are not allowed to edit this site."
 msgstr "このサイトを編集する権限がありません。"
 
-#: wp-admin/network/settings.php:389
+#: wp-admin/network/settings.php:385
 msgid "The email address of the first comment author on a new site."
 msgstr "新規サイトの最初のコメント投稿者のメールアドレス。"
 
-#: wp-admin/network/settings.php:385
+#: wp-admin/network/settings.php:381
 msgid "First Comment Email"
 msgstr "最初のコメントのメールアドレス"
 
@@ -492,33 +539,28 @@ msgid "No sites found."
 msgstr "サイトは見つかりません。"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:41
-#: wp-admin/network/site-info.php:205
+#: wp-admin/network/site-info.php:207
 msgid "Mature"
 msgstr "成人向け"
 
-#: wp-admin/includes/class-wp-ms-sites-list-table.php:40
-#: wp-admin/network/site-info.php:203
-msgid "Deleted"
-msgstr "削除済み"
-
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:39
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:820
-#: wp-admin/network/site-info.php:202
+#: wp-admin/network/site-info.php:204
 msgctxt "site"
 msgid "Spam"
 msgstr "スパム"
 
 #: wp-admin/includes/class-wp-ms-sites-list-table.php:38
-#: wp-admin/network/site-info.php:201
+#: wp-admin/network/site-info.php:203
 msgid "Archived"
 msgstr "アーカイブ化"
 
-#: wp-admin/network/site-users.php:376 wp-admin/network/user-new.php:149
+#: wp-admin/network/site-users.php:396 wp-admin/network/user-new.php:149
 msgid "A password reset link will be sent to the user via email."
 msgstr "ユーザーにパスワードリセット用リンクがメールで送信されます。"
 
 #. translators: 1: NOBLOGREDIRECT, 2: wp-config.php
-#: wp-admin/network/settings.php:227
+#: wp-admin/network/settings.php:223
 msgid "If registration is disabled, please set %1$s in %2$s to a URL you will redirect visitors to if they visit a non-existent site."
 msgstr "ユーザー登録が無効になっている場合、存在しないブログにアクセスした場合にリダイレクトする URL を %2$s の %1$s に記入して下さい。"
 
@@ -606,16 +648,6 @@ msgstr "サイト %s をアーカイブ化しようとしています。"
 msgid "You are about to unarchive the site %s."
 msgstr "サイト %s のアーカイブ化を解除しようとしています。"
 
-#. translators: %s: Site URL.
-#: wp-admin/network/sites.php:66
-msgid "You are about to deactivate the site %s."
-msgstr "サイト %s を停止しようとしています。"
-
-#. translators: %s: Site URL.
-#: wp-admin/network/sites.php:64
-msgid "You are about to activate the site %s."
-msgstr "サイト %s を有効化しようとしています。"
-
 #: wp-admin/network/site-info.php:28 wp-admin/network/site-settings.php:28
 #: wp-admin/network/site-themes.php:53 wp-admin/network/site-users.php:46
 msgid "The requested site does not exist."
@@ -638,7 +670,7 @@ msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Themes_Screen\">Docum
 msgstr "<a href=\"https://wpdocs.osdn.jp//Network_Admin_Themes_Screen\">サイトネットワークテーマの解説</a>"
 
 #. translators: 1: Site URL, 2: Server error message.
-#: wp-admin/network/upgrade.php:99
+#: wp-admin/network/upgrade.php:100
 msgid "Warning! Problem updating %1$s. Your server may not be able to connect to sites running on it. Error message: %2$s"
 msgstr "注: %1$s の更新中に問題が発生しました。サーバーが稼働しているサイトに接続できない可能性があります。エラーメッセージ: %2$s"
 
@@ -677,35 +709,20 @@ msgid "Delete Themes"
 msgstr "テーマを削除"
 
 #. translators: Hidden accessibility text.
-#: wp-admin/network/site-info.php:214
-msgid "Set site attributes"
-msgstr "サイトの属性を設定"
-
-#. translators: Hidden accessibility text.
-#: wp-admin/network/settings.php:519
-msgid "Enable menus"
-msgstr "メニューを有効化"
-
-#. translators: Hidden accessibility text.
-#: wp-admin/network/settings.php:449
+#: wp-admin/network/settings.php:445
 msgid "Size in kilobytes"
 msgstr "サイズ (KB)"
 
-#: wp-admin/network/settings.php:431
+#: wp-admin/network/settings.php:427
 msgid "Allowed file types. Separate types by spaces."
 msgstr "許可するファイルの種類。半角スペースで区切って入力してください。"
-
-#. translators: Hidden accessibility text.
-#: wp-admin/network/settings.php:215
-msgid "New registrations settings"
-msgstr "新しい登録設定"
 
 #. translators: 1: File name (.htaccess or web.config), 2: File path.
 #: wp-admin/includes/network.php:651 wp-admin/includes/network.php:713
 msgid "Add the following to your %1$s file in %2$s, <strong>replacing</strong> other WordPress rules:"
 msgstr "次の内容を %2$s にある %1$s ファイルへ追加して、他の WordPress ルールを<strong>置き換えて</strong>ください:"
 
-#: wp-admin/network/sites.php:113 wp-admin/network/sites.php:203
+#: wp-admin/network/sites.php:114 wp-admin/network/sites.php:214
 msgid "Confirm your action"
 msgstr "操作を確認"
 
@@ -765,12 +782,12 @@ msgstr "ここでは以下のようなことができます。"
 msgid "Welcome to your Network Admin. This area of the Administration Screens is used for managing all aspects of your Multisite Network."
 msgstr "サイトネットワーク管理画面へようこそ。この画面は、マルチサイトネットワーク向け各種設定の管理に使います。"
 
-#: wp-admin/network/upgrade.php:24
+#: wp-admin/network/upgrade.php:29
 msgid "Only use this screen once you have updated to a new version of WordPress through Updates/Available Updates (via the Network Administration navigation menu or the Toolbar). Clicking the Upgrade Network button will step through each site in the network, five at a time, and make sure any database updates are applied."
 msgstr "この画面は、サイトネットワーク管理メニューまたはツールバーから「更新 / 利用可能な更新」を使って新バージョンの WordPress へアップグレードした際にのみご利用ください。「サイトネットワークをアップグレード」をクリックすると、ネットワーク内の各サイトを5つずつチェックしてデータベースの更新を適用します。"
 
-#: wp-admin/network/menu.php:51 wp-admin/network/upgrade.php:16
-#: wp-admin/network/upgrade.php:43 wp-admin/network/upgrade.php:145
+#: wp-admin/network/menu.php:51 wp-admin/network/upgrade.php:21
+#: wp-admin/network/upgrade.php:48 wp-admin/network/upgrade.php:146
 msgid "Upgrade Network"
 msgstr "サイトネットワークをアップグレード"
 
@@ -783,11 +800,11 @@ msgstr "サブディレクトリ型のサイトネットワークは、カスタ
 msgid "Add the designated lines of code to wp-config.php (just before <code>/*...stop editing...*/</code>) and <code>.htaccess</code> (replacing the existing WordPress rules)."
 msgstr "wp-config.php (<code>/*...編集が必要なのはここまでです...*/</code> の直前に) と <code>.htaccess</code> (既存の WordPress のルールを置き換えて) に、コードの所定の行を追加してください。"
 
-#: wp-admin/network/settings.php:461
+#: wp-admin/network/settings.php:457
 msgid "Language Settings"
 msgstr "言語の設定"
 
-#: wp-admin/network/settings.php:253
+#: wp-admin/network/settings.php:249
 msgid "Allow site administrators to add new users to their site via the \"Users &rarr; Add User\" page"
 msgstr "サイト管理者による「ユーザー &rarr; ユーザーを追加」ページからのサイトへの新規ユーザー追加を許可"
 
@@ -795,27 +812,27 @@ msgstr "サイト管理者による「ユーザー &rarr; ユーザーを追加�
 msgid "Super admins can no longer be added on the Options screen. You must now go to the list of existing users on Network Admin > Users and click on Username or the Edit action link below that name. This goes to an Edit User page where you can check a box to grant super admin privileges."
 msgstr "設定画面から特権管理者を追加することはできません。「サイトネットワーク管理 > ユーザー」画面の既存ユーザー一覧で、ユーザー名またはその下の「編集」リンクをクリックしてください。次のユーザープロフィール編集画面で、特権管理者に昇格させるためのチェックボックスを有効化できます。"
 
-#: wp-admin/network/site-users.php:273
+#: wp-admin/network/site-users.php:293
 msgid "Enter the username and email."
 msgstr "ユーザー名とメールアドレスを入力してください。"
 
-#: wp-admin/network/site-users.php:270
+#: wp-admin/network/site-users.php:290
 msgid "User created."
 msgstr "ユーザーを作成しました。"
 
-#: wp-admin/network/site-users.php:266
+#: wp-admin/network/site-users.php:286
 msgid "Select a user to remove."
 msgstr "削除するユーザーを選択してください。"
 
-#: wp-admin/network/site-users.php:259
+#: wp-admin/network/site-users.php:279
 msgid "Select a user to change role."
 msgstr "権限を変更するユーザーを選択してください。"
 
-#: wp-admin/network/site-users.php:252
+#: wp-admin/network/site-users.php:272
 msgid "Enter the username of an existing user."
 msgstr "既存のユーザーのユーザー名を入力してください。"
 
-#: wp-admin/network/site-users.php:246
+#: wp-admin/network/site-users.php:266
 msgid "User is already a member of this site."
 msgstr "ユーザーはすでにこのサイトのメンバーです。"
 
@@ -886,7 +903,7 @@ msgstr "%s 個のテーマを有効化しました。"
 
 #. translators: %s: Site title.
 #: wp-admin/network/site-info.php:135 wp-admin/network/site-settings.php:84
-#: wp-admin/network/site-themes.php:171 wp-admin/network/site-users.php:200
+#: wp-admin/network/site-themes.php:171 wp-admin/network/site-users.php:220
 msgid "Edit Site: %s"
 msgstr "サイトを編集: %s"
 
@@ -896,13 +913,13 @@ msgid "Invalid site ID."
 msgstr "無効なサイト ID です。"
 
 #. translators: %s: Site URL.
-#: wp-admin/network/sites.php:178
+#: wp-admin/network/sites.php:189
 msgid "Sorry, you are not allowed to delete the site %s."
 msgstr "サイト %s を削除する権限がありません。"
 
 #: wp-admin/network/sites.php:37
-msgid "Delete which is a permanent action after the confirmation screen."
-msgstr "「削除」は確認画面の後に実行される、元に戻すことができない操作です。"
+msgid "Delete Permanently which is a permanent action after the confirmation screen."
+msgstr "「完全に削除」は確認画面の後に実行される、元に戻すことができない操作です。"
 
 #: wp-admin/network/sites.php:35
 msgid "Dashboard leads to the Dashboard for that site."
@@ -916,7 +933,7 @@ msgstr "別のサイト編集画面への「編集」リンク。"
 msgid "Add Site takes you to the screen for adding a new site to the network. You can search for a site by Name, ID number, or IP address. Screen Options allows you to choose how many sites to display on one page."
 msgstr "「サイトを追加」をクリックすると、ネットワークに新しいサイトを追加する画面へ移動します。サイト名、ID、IP アドレスのいずれかでサイトを検索できます。表示オプションを使って、1ページに表示されるサイト数を選択できます。"
 
-#: wp-admin/network/settings.php:251
+#: wp-admin/network/settings.php:247
 msgid "Add Users"
 msgstr "ユーザーを追加"
 
@@ -1097,8 +1114,8 @@ msgid "If the admin email for the new site does not exist in the database, a new
 msgstr "新規サイトの管理者のメールアドレスがデータベースに存在しない場合、新規ユーザーも作られます。"
 
 #: wp-admin/network/sites.php:36
-msgid "Deactivate, Archive, and Spam which lead to confirmation screens. These actions can be reversed later."
-msgstr "「停止」「アーカイブ」「スパム」をクリックすると確認画面に移動します。これらの操作は後から元に戻すことができます。"
+msgid "Flag for Deletion, Archive, and Spam which lead to confirmation screens. These actions can be reversed later."
+msgstr "「削除としてマーク」「アーカイブ」「スパム」をクリックすると確認画面に移動します。これらの操作は後から元に戻すことができます。"
 
 #: wp-admin/network/sites.php:33
 msgid "Hovering over each site reveals seven options (three for the primary site):"
@@ -1136,11 +1153,11 @@ msgstr "見出しをクリックすればテーブルを並び替えられます
 msgid "This table shows all users across the network and the sites to which they are assigned."
 msgstr "このテーブルでは、サイトネットワーク上のすべてのユーザーと所属するサイトを表示しています。"
 
-#: wp-admin/network/upgrade.php:26
+#: wp-admin/network/upgrade.php:31
 msgid "If this process fails for any reason, users logging in to their sites will force the same update."
 msgstr "何らかの理由でこのプロセスが失敗した場合、ユーザーのサイトへのログインと同時に更新を行います。"
 
-#: wp-admin/network/upgrade.php:25
+#: wp-admin/network/upgrade.php:30
 msgid "If a version update to core has not happened, clicking this button will not affect anything."
 msgstr "コアに対するバージョンの更新がない場合は、このボタンをクリックしても何も起きません。"
 
@@ -1177,15 +1194,15 @@ msgstr "この画面でサイトネットワーク全体の設定を指定、変
 msgid "The following words are reserved for use by WordPress functions and cannot be used as site names: %s"
 msgstr "以下の語句は WordPress の機能によって予約されており、サイト名として使うことはできません: %s"
 
-#: wp-admin/network/upgrade.php:125
+#: wp-admin/network/upgrade.php:126
 msgid "If your browser does not start loading the next page automatically, click this link:"
 msgstr "次のページに自動で移動しない場合は、このリンクをクリックしてください。"
 
-#: wp-admin/network/settings.php:316
+#: wp-admin/network/settings.php:312
 msgid "If you want to ban domains from site registrations. One domain per line."
 msgstr "特定のドメインからのサイト登録を禁止したい場合、禁止するドメインを改行で区切って入力してください。"
 
-#: wp-admin/network/settings.php:296
+#: wp-admin/network/settings.php:292
 msgid "If you want to limit site registrations to certain domains. One domain per line."
 msgstr "特定のドメインからのみのサイト登録を許可したい場合、許可するドメインを改行で区切って入力してください。"
 
@@ -1193,19 +1210,19 @@ msgstr "特定のドメインからのみのサイト登録を許可したい場
 msgid "Users removed from spam."
 msgstr "ユーザーのスパマー判定を解除しました。"
 
-#: wp-admin/network/sites.php:353
+#: wp-admin/network/sites.php:367
 msgid "Site marked as spam."
 msgstr "サイトをスパムとしてマークしました。"
 
-#: wp-admin/network/sites.php:350
+#: wp-admin/network/sites.php:364
 msgid "Site removed from spam."
 msgstr "サイトのスパム判定を解除しました。"
 
-#: wp-admin/network/sites.php:326
+#: wp-admin/network/sites.php:340
 msgid "Sites marked as spam."
 msgstr "サイトをスパムとしてマークしました。"
 
-#: wp-admin/network/sites.php:323
+#: wp-admin/network/sites.php:337
 msgid "Sites removed from spam."
 msgstr "サイトのスパム判定を解除しました。"
 
@@ -1217,31 +1234,15 @@ msgstr "ユーザーを削除しました。"
 msgid "Users marked as spam."
 msgstr "ユーザーをスパマーとしてマークしました。"
 
-#: wp-admin/network/sites.php:347
-msgid "Site deactivated."
-msgstr "サイトを停止しました。"
-
-#: wp-admin/network/sites.php:344
-msgid "Site activated."
-msgstr "サイトを有効化しました。"
-
-#: wp-admin/network/sites.php:341
+#: wp-admin/network/sites.php:355
 msgid "Site unarchived."
 msgstr "サイトのアーカイブ化を解除しました。"
 
-#: wp-admin/network/sites.php:338
+#: wp-admin/network/sites.php:352
 msgid "Site archived."
 msgstr "サイトをアーカイブ化しました。"
 
-#: wp-admin/network/sites.php:332
-msgid "Site deleted."
-msgstr "サイトを削除しました。"
-
-#: wp-admin/network/sites.php:329
-msgid "Sites deleted."
-msgstr "サイトを削除しました。"
-
-#: wp-admin/network/sites.php:104 wp-admin/network/sites.php:238
+#: wp-admin/network/sites.php:104 wp-admin/network/sites.php:252
 msgid "Sorry, you are not allowed to change the current site."
 msgstr "このサイトを変更する権限がありません。"
 
@@ -1249,64 +1250,64 @@ msgstr "このサイトを変更する権限がありません。"
 msgid "There was an error creating the user."
 msgstr "誤りがあったためユーザーを作成できませんでした。"
 
-#: wp-admin/network/settings.php:427
+#: wp-admin/network/settings.php:423
 msgid "Upload file types"
 msgstr "アップロード可能なファイル形式"
 
 #. translators: %s: Number of megabytes to limit uploads to.
-#: wp-admin/network/settings.php:412
+#: wp-admin/network/settings.php:408
 msgid "Limit total size of files uploaded to %s MB"
 msgstr "アップロードファイルの合計を %s MB に制限"
 
-#: wp-admin/network/settings.php:398
+#: wp-admin/network/settings.php:394
 msgid "The URL for the first comment on a new site."
 msgstr "新規サイトの最初のコメント投稿者サイト URL。"
 
-#: wp-admin/network/settings.php:380
+#: wp-admin/network/settings.php:376
 msgid "The author of the first comment on a new site."
 msgstr "新規サイトの最初のコメント投稿者名。"
 
-#: wp-admin/network/settings.php:371
+#: wp-admin/network/settings.php:367
 msgid "The first comment on a new site."
 msgstr "新規サイトの最初のコメント。"
 
-#: wp-admin/network/settings.php:361
+#: wp-admin/network/settings.php:357
 msgid "The first page on a new site."
 msgstr "新規サイトの最初の固定ページ。"
 
-#: wp-admin/network/settings.php:351
+#: wp-admin/network/settings.php:347
 msgid "The first post on a new site."
 msgstr "新規サイトの最初の投稿。"
 
-#: wp-admin/network/upgrade.php:74
+#: wp-admin/network/upgrade.php:75
 msgid "All done!"
 msgstr "すべて完了しました。"
 
-#: wp-admin/network/settings.php:221
+#: wp-admin/network/settings.php:217
 msgid "Both sites and user accounts can be registered"
 msgstr "新規サイトおよびユーザーアカウントの登録をどちらも許可"
 
-#: wp-admin/network/settings.php:220
+#: wp-admin/network/settings.php:216
 msgid "Logged in users may register new sites"
 msgstr "ログイン中のユーザーによる新規サイト登録を許可"
 
-#: wp-admin/network/settings.php:219
+#: wp-admin/network/settings.php:215
 msgid "User accounts may be registered"
 msgstr "ユーザーアカウントの新規登録を許可"
 
-#: wp-admin/network/settings.php:218
+#: wp-admin/network/settings.php:214
 msgid "Registration is disabled"
 msgstr "新規登録は無効化されています"
 
-#: wp-admin/network/settings.php:514
+#: wp-admin/network/settings.php:509
 msgid "Enable administration menus"
 msgstr "管理メニューを有効化"
 
-#: wp-admin/network/settings.php:403
+#: wp-admin/network/settings.php:399
 msgid "Upload Settings"
 msgstr "アップロード設定"
 
-#: wp-admin/network/settings.php:322
+#: wp-admin/network/settings.php:318
 msgid "New Site Settings"
 msgstr "新規サイト設定"
 
@@ -1326,23 +1327,23 @@ msgstr "メールアドレスがありません。"
 msgid "Missing or invalid site address."
 msgstr "サイトのアドレスがないか、または間違っています。"
 
-#: wp-admin/network/upgrade.php:125
+#: wp-admin/network/upgrade.php:126
 msgid "Next Sites"
 msgstr "次のサイトへ"
 
-#: wp-admin/network/settings.php:406
+#: wp-admin/network/settings.php:402
 msgid "Site upload space"
 msgstr "サイトのアップロード容量"
 
-#: wp-admin/network/settings.php:331
+#: wp-admin/network/settings.php:327
 msgid "The welcome email sent to new site owners."
 msgstr "新規サイト所有者に送信される案内メール。"
 
-#: wp-admin/network/settings.php:271
+#: wp-admin/network/settings.php:267
 msgid "Users are not allowed to register these sites. Separate names by spaces."
 msgstr "登録できないサイト名。半角スペースで区切ってください。"
 
-#: wp-admin/network/settings.php:246
+#: wp-admin/network/settings.php:242
 msgid "Send the network admin an email notification every time someone registers a site or user account"
 msgstr "新しいサイトまたはユーザーが登録されたらサイトネットワーク管理者にメールで通知する"
 
@@ -1360,71 +1361,71 @@ msgstr "管理者メールアドレス"
 
 #: wp-admin/network/menu.php:58 wp-admin/network/site-new.php:182
 #: wp-admin/network/site-new.php:192 wp-admin/network/site-new.php:299
-#: wp-admin/network/sites.php:391
+#: wp-admin/network/sites.php:405
 msgid "Add Site"
 msgstr "サイトを追加"
 
-#: wp-admin/network/settings.php:464
+#: wp-admin/network/settings.php:460
 msgid "Default Language"
 msgstr "初期設定言語"
 
-#: wp-admin/network/settings.php:437
+#: wp-admin/network/settings.php:433
 msgid "Max upload file size"
 msgstr "アップロードファイルの最大サイズ"
 
-#: wp-admin/network/settings.php:394
+#: wp-admin/network/settings.php:390
 msgid "First Comment URL"
 msgstr "最初のコメントの URL"
 
-#: wp-admin/network/settings.php:376
+#: wp-admin/network/settings.php:372
 msgid "First Comment Author"
 msgstr "最初のコメントの投稿者"
 
-#: wp-admin/network/settings.php:366
+#: wp-admin/network/settings.php:362
 msgid "First Comment"
 msgstr "最初のコメント"
 
-#: wp-admin/network/settings.php:356
+#: wp-admin/network/settings.php:352
 msgid "First Page"
 msgstr "最初の固定ページ"
 
-#: wp-admin/network/settings.php:341
+#: wp-admin/network/settings.php:337
 msgid "The welcome email sent to new users."
 msgstr "新規ユーザーに送信される案内メール。"
 
-#: wp-admin/network/settings.php:336
+#: wp-admin/network/settings.php:332
 msgid "Welcome User Email"
 msgstr "新ユーザー案内メール"
 
-#: wp-admin/network/settings.php:326
+#: wp-admin/network/settings.php:322
 msgid "Welcome Email"
 msgstr "案内メール"
 
-#: wp-admin/network/settings.php:302
+#: wp-admin/network/settings.php:298
 msgid "Banned Email Domains"
 msgstr "登録を拒否するメールのドメイン"
 
-#: wp-admin/network/settings.php:277
+#: wp-admin/network/settings.php:273
 msgid "Limited Email Registrations"
 msgstr "登録メールアドレスの制限"
 
-#: wp-admin/network/settings.php:258
+#: wp-admin/network/settings.php:254
 msgid "Banned Names"
 msgstr "禁止名"
 
-#: wp-admin/network/site-users.php:353
+#: wp-admin/network/site-users.php:373
 msgid "Add New User"
 msgstr "新規ユーザーを追加"
 
-#: wp-admin/network/settings.php:239
+#: wp-admin/network/settings.php:235
 msgid "Registration notification"
 msgstr "登録通知"
 
-#: wp-admin/network/settings.php:203
+#: wp-admin/network/settings.php:202
 msgid "Allow new registrations"
 msgstr "新規登録の許可"
 
-#: wp-admin/network/site-users.php:276
+#: wp-admin/network/site-users.php:296
 msgid "Duplicated username or email address."
 msgstr "このユーザー名もしくはメールアドレスは使用されています。"
 
@@ -1432,6 +1433,6 @@ msgstr "このユーザー名もしくはメールアドレスは使用されて
 msgid "Cannot create an empty user."
 msgstr "空のユーザーは作成できません。"
 
-#: wp-admin/network/sites.php:128 wp-admin/network/sites.php:223
+#: wp-admin/network/sites.php:109
 msgid "Confirm"
 msgstr "確認"
